@@ -1,6 +1,6 @@
 const config = {
   baseUrl: '/',
-  API_URL: 'http://3.105.1.244/api/v1',
+  API_URL: 'https://dev-api.soiinow.com/api/v1',
 }
 
 export default config
