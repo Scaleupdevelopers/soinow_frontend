@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import config from '../../utils/config'
 import AuthLayout from '../../layouts/AuthLayout'
 
@@ -7,6 +7,7 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false)
   const [values, setValues] = useState({ email: '', password: '' })
   const [errors, setErrors] = useState({})
+  const navigate = useNavigate()
 
   function handleChange(event) {
     const { name, value } = event.target
@@ -40,6 +41,8 @@ function Login() {
     if (firstInvalidField) {
       event.currentTarget.elements.namedItem(firstInvalidField).focus()
     }
+
+    if (!firstInvalidField) navigate(`${config.baseUrl}dashboard`)
   }
 
   return (

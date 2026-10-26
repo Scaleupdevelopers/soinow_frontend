@@ -1,0 +1,32 @@
+.businesses-main { max-width: 1450px; }
+.page-heading { display:flex; align-items:center; justify-content:space-between; margin:52px 0 28px; }
+.page-heading h1 { margin:0 0 5px; font-size:38px; letter-spacing:-1px; }
+.page-heading p { margin:0; color:#827b75; font-size:16px; }
+.primary-action { padding:14px 20px; border:0; border-radius:8px; background:var(--gold); color:var(--ink); font:inherit; font-weight:700; cursor:pointer; }
+.business-toolbar { display:flex; gap:10px; margin-bottom:18px; }
+.business-search { display:flex; align-items:center; flex:1; gap:10px; padding:0 14px; border-radius:8px; background:#fff; }
+.business-search span { color:#777; font-size:24px; }.business-search input { width:100%; height:46px; border:0; outline:0; background:transparent; font:inherit; }
+.filter-dropdown { position:relative; }
+.filter-button {
+ min-width:120px;
+ height:46px;
+ padding:0 38px 0 16px;
+ border:0;
+ border-radius:8px;
+ background:#fff;
+ color:var(--ink);
+ cursor:pointer;
+ font-family:Arial,Helvetica,sans-serif;
+ font-size:14px;
+ font-weight:600;
+ position:relative;
+ text-align:left;
+}
+.filter-chevron { position:absolute; top:16px; right:13px; width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:transform .2s ease; }.filter-chevron.arrow-up { transform:rotate(180deg); }
+.filter-menu { position:absolute; z-index:10; top:calc(100% + 8px); left:0; min-width:150px; display:flex; flex-direction:column; gap:4px; padding:8px; border-radius:10px; background:#fff; box-shadow:0 12px 30px #39252a24; }
+.filter-menu button { width:100%; padding:10px 12px; border:0; border-radius:7px; background:transparent; color:var(--ink); font:inherit; font-size:14px; text-align:left; cursor:pointer; }.filter-menu button:hover,.filter-menu button.selected { background:#eef0e5; color:var(--olive); font-weight:700; }
+.business-table { overflow:hidden; border-radius:10px; background:#fff; box-shadow:0 10px 24px #39252a12; }
+.business-table-head,.business-row { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr 40px; align-items:center; gap:20px; padding:0 20px; }
+.business-table-head { min-height:48px; background:var(--olive); color:#fff; font-size:13px; font-weight:700; }.business-row { min-height:74px; border-bottom:1px solid #f0eeea; color:#716b67; font-size:14px; }.business-row:last-child { border-bottom:0; }
+.business-name { display:flex; align-items:center; gap:10px; color:var(--ink); }.business-name small { display:block; margin-top:4px; color:#958e88; }.business-thumb { display:grid; place-items:center; width:50px; height:50px; border-radius:6px; background:#e6d7c6; color:#b78b60; }.business-status { padding:7px 12px; border-radius:9px; font-size:13px; }.business-status.active { background:#d4efd8; color:#65916d; }.business-status.inactive { background:#f4dcd8; color:#b85c51; }.business-more { color:var(--ink); font-weight:700; }.empty-businesses { padding:40px; color:#827b75; text-align:center; }
+@media (max-width:760px) { .page-heading { align-items:flex-start; gap:20px; flex-direction:column; margin-top:34px; }.business-toolbar { flex-wrap:wrap; }.business-search { flex-basis:100%; }.filter-dropdown { flex:1; min-width:0; }.filter-button { width:100%; }.business-table { overflow-x:auto; }.business-table-head,.business-row { min-width:700px; } }
